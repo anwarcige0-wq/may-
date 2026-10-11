@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>TRAVEL SOM — Qaybta Maamulka (Admin Portal)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<section id="login" class="login" hidden>
+  <div class="login-container">
+    <div class="login-brand-header">
+      <div class="brand"><i>✈</i>TRAVEL <b>SOM</b></div>
+      <span class="login-badge">QAYBTA MAAMULKA</span>
+    </div>
+    <form id="loginForm" class="login-card" autocomplete="on">
+      <div class="login-welcome">
+        <h1>Soo Gal Nidaamka</h1>
+        <p class="muted">Maamulka sare ee shirkadda TRAVEL SOM. Fadlan gali macluumaadkaaga maamulaha.</p>
+      </div>
+
+      <div id="lErr" class="diidmo-box" role="alert" style="display:none;"></div>
+
+      <label class="fld">
+        <span>Email-ka Maamulka</span>
+        <div class="inp-icon-wrap">
+          <input id="lEmail" type="text" inputmode="email" name="email" value="" autocomplete="username" placeholder="Gali Email-ka adminka (cabdilahi cawil881@gmail.com)" required autofocus>
+        </div>
+      </label>
+
+      <label class="fld">
+        <span>PIN-ka / Furaha Sirta ah</span>
+        <div class="inp-icon-wrap">
+          <input id="lPass" type="password" name="password" value="" autocomplete="current-password" placeholder="Gali PIN-ka adminka" required>
+          <button type="button" id="togglePassBtn" class="pass-toggle" title="Muuji/Qari Furaha">👁️</button>
+        </div>
+      </label>
+
+      <div class="login-actions">
+        <button class="btn primary btn-glow" id="lBtn" type="submit">
+          <span>🚀 Gal Nidaamka (Sign In)</span>
+        </button>
+      </div>
+
+      <div class="login-footer">
+        <a href="../index.html" class="back-link">← Ku noqo Bogga Hore ee Website-ka</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <aside id="side">
+    <div class="side-top">
+      <a href="../index.html" class="brand" title="Eeg Website-ka"><i>✈</i>TRAVEL <b>SOM</b></a>
+      <div class="admin-pill">
+        <span class="status-dot"></span>
+        <span>MAAMULKA SARE</span>
+      </div>
+    </div>
+    
+    <div class="menu-label">MAAMULKA GUUD</div>
+    <nav id="menu" aria-label="Admin Navigation"></nav>
+
+    <div class="side-bottom">
+      <div class="who-box">
+        <div class="who-avatar">👤</div>
+        <div class="who-details">
+          <div class="who-role">Maamule Sare</div>
+          <div class="who" id="who">cabdilahi cawil881@gmail.com</div>
+        </div>
+      </div>
+      <button class="btn-side-logout" id="sideLogoutBtn" type="button">🚪 Ka Bax</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <div class="top-left">
+        <button class="burger" id="burger" type="button" aria-label="Menu">☰</button>
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <div class="page-subtitle" id="pageSubtitle">Dulmar guud iyo maamulka website-ka</div>
+        </div>
+      </div>
+      <div class="actions">
+        <span class="badge" id="dirtyBadge"></span>
+        <a class="btn ghost sm" id="previewBtn" href="../index.html?preview=1" target="_blank" rel="noopener">👁️ Eeg Website-ka</a>
+        <button class="btn primary sm btn-glow" id="publishBtn" type="button">🚀 Faafi Isbeddellada</button>
+        <button class="btn ghost sm" id="discardBtn" type="button">Diid Isbeddellada</button>
+      </div>
+    </header>
+
+    <main id="view"></main>
+  </div>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlg-box">
+    <div class="dlg-icon">⚠️</div>
+    <p id="dlgMsg"></p>
+    <div class="row-end">
+      <button class="btn ghost" value="cancel">Ka Noqo</button>
+      <button class="btn primary" value="ok">Xaqiiji</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="admin.js"></script>
+</body>
+</html>

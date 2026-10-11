@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Easy Booking — TRAVEL SOM | Plan Your Trip</title>
+<meta name="description" content="Book your bus, taxi or flight tickets easily across Somali cities with TRAVEL SOM. Fast, comfortable, and reliable transportation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header><div class="wrap nav">
+<a href="index.html" class="logo"><i>✈</i>TRAVEL <b>SOM</b></a>
+<nav id="nav"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="admin/index.html" class="nav-admin-link">🛡️ Admin</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="booking.html" class="active">Easy Booking</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li class="mob"><a href="booking.html">Hadda Dalbo</a></li>
+<li class="mob"><div id="custAuthMountMob" class="cust-auth-mount-mob"></div></li>
+</ul></nav>
+<a class="call" href="tel:+2520637537706">📞 <span>+252 063 7537706</span></a>
+<div id="custAuthMount" class="cust-auth-mount"></div>
+<a class="btn p" href="#booking-form">Hadda Dalbo</a>
+<button type="button" class="menu" id="mb" aria-label="Menu" aria-controls="nav">☰</button>
+</div></header>
+
+<div class="page-hero">
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">/</span>
+    <span>Easy Booking</span>
+  </div>
+  <span class="tag">EASY ONLINE BOOKING</span>
+  <h1>Plan Your Trip Across Somalia</h1>
+  <p class="lead">Dooro adeegga aad rabto (Bas, Taxi ama Diyaarad), dariiqa safarka, iyo taariikhda si aad u hesho tikidhkaaga daqiiqad gudaheed.</p>
+</div>
+</div>
+
+<section class="sec" id="booking-form">
+<div class="wrap">
+
+  <!-- Switcher Tabs: Booking vs Tracking -->
+  <div class="booking-tabs-container" style="margin-bottom: 28px; display: flex; justify-content: center;">
+    <div style="display: inline-flex; background: #e2e8f0; padding: 6px; border-radius: 999px; gap: 6px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06); max-width: 100%; flex-wrap: wrap; justify-content: center;">
+      <button type="button" id="tabBtnBooking" class="btn p" style="border-radius: 999px; font-weight: 700; padding: 12px 28px; border: none; cursor: pointer; transition: all 0.2s ease;">
+        🎟️ Dalbo Safar Cusub
+      </button>
+      <button type="button" id="tabBtnTracking" class="btn g" style="border-radius: 999px; font-weight: 700; padding: 12px 28px; border: none; cursor: pointer; transition: all 0.2s ease; background: transparent; color: var(--navy);">
+        🔍 Raadi Tikidhkaaga (Track)
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab 1: Booking Flow Panel -->
+  <div id="panelBooking">
+    <div style="display:flex; justify-content:flex-end; margin-bottom: 14px;">
+      <a href="#track" id="quickTrackLink" style="font-size: 14px; font-weight: 700; color: var(--sun); display: inline-flex; align-items: center; gap: 6px;">
+        🔍 Horay ma u goosatay tikidh? Guji halkan si aad u raadiso &rarr;
+      </a>
+    </div>
+
+  <div style="margin-bottom: 24px;">
+    <span class="tag">Jidadka Ugu Caansan</span>
+    <h3 style="font-size:22px; margin: 6px 0 12px;">Dooro Safar Degdeg Ah (Quick Routes)</h3>
+    <div class="quick-routes">
+      <button type="button" class="route-pill" data-route-from="Mogadishu" data-route-to="Hargeisa" data-route-service="Flight">✈️ Mogadishu ↔ Hargeisa</button>
+      <button type="button" class="route-pill" data-route-from="Hargeisa" data-route-to="Berbera" data-route-service="Bus">🚌 Hargeisa ↔ Berbera</button>
+      <button type="button" class="route-pill" data-route-from="Garowe" data-route-to="Bosaso" data-route-service="Bus">🚌 Garowe ↔ Bosaso</button>
+      <button type="button" class="route-pill" data-route-from="Mogadishu" data-route-to="Baidoa" data-route-service="Bus">🚌 Mogadishu ↔ Baidoa</button>
+      <button type="button" class="route-pill" data-route-from="Mogadishu" data-route-to="Kismayo" data-route-service="Bus">🚌 Mogadishu ↔ Kismayo</button>
+      <button type="button" class="route-pill" data-route-from="Hargeisa" data-route-to="Burao" data-route-service="Bus">🚌 Hargeisa ↔ Burao</button>
+    </div>
+  </div>
+
+  <div class="book-page-grid">
+
+    <!-- Left: Main Booking Form -->
+    <div class="booking-main-card">
+      <div style="margin-bottom: 22px;">
+        <span class="badge-tag">Tallaabada 1-aad: Buuxi Xogta</span>
+        <h2 style="font-size: clamp(24px, 3vw, 32px); margin: 6px 0 8px;">Foomka Boos Celinta</h2>
+        <p style="color: var(--mut); margin: 0; font-size: 15px;">Fadlan buuxi xogta safarkaaga si aan kuu diyaarino tikidhka ugu habboon.</p>
+      </div>
+
+      <form id="bf" style="display: grid; gap: 20px;">
+        <!-- Service Type Selection -->
+        <div>
+          <label>Nooca Adeegga (Choose Service Type)</label>
+          <div class="types" id="types">
+            <label><input type="radio" name="t" value="Bus" checked><span>🚌 Bus (Bas Raaxo)</span></label>
+            <label><input type="radio" name="t" value="Taxi"><span>🚕 Taxi (Gaari Gaar Ah)</span></label>
+            <label><input type="radio" name="t" value="Flight"><span>✈ Flight (Diyaarad)</span></label>
+          </div>
+          <!-- Dynamic Service Specific Information Box -->
+          <div id="serviceInfoBox" class="service-spec-box bus"></div>
+        </div>
+
+        <!-- Route: From & To -->
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="from">Ka Bax (Departure City)</label>
+            <select id="from" required>
+              <option value="Mogadishu">Mogadishu (Muqdisho)</option>
+              <option value="Hargeisa">Hargeisa (Hargeysa)</option>
+              <option value="Bosaso">Bosaso (Boosaaso)</option>
+              <option value="Garowe">Garowe (Garoowe)</option>
+              <option value="Kismayo">Kismayo (Kismaayo)</option>
+              <option value="Baidoa">Baidoa (Baydhabo)</option>
+              <option value="Burao">Burao (Burco)</option>
+              <option value="Berbera">Berbera</option>
+              <option value="Beledweyne">Beledweyne</option>
+              <option value="Galkayo">Galkayo (Gaalkacyo)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="to">U Socoto (Destination City)</label>
+            <select id="to" required>
+              <option value="Mogadishu">Mogadishu (Muqdisho)</option>
+              <option value="Hargeisa" selected>Hargeisa (Hargeysa)</option>
+              <option value="Bosaso">Bosaso (Boosaaso)</option>
+              <option value="Garowe">Garowe (Garoowe)</option>
+              <option value="Kismayo">Kismayo (Kismaayo)</option>
+              <option value="Baidoa">Baidoa (Baydhabo)</option>
+              <option value="Burao">Burao (Burco)</option>
+              <option value="Berbera">Berbera</option>
+              <option value="Beledweyne">Beledweyne</option>
+              <option value="Galkayo">Galkayo (Gaalkacyo)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Bus Transit Cities & Stopovers Box -->
+        <div id="busTransitBox" class="transit-box" style="display:none;"></div>
+
+        <!-- Departure Time / Schedule Field -->
+        <div class="form-field" id="departureScheduleWrap">
+          <label for="pDepartTime">Saacadda Bixitaanka (Departure Schedule)</label>
+          <select id="pDepartTime" required></select>
+        </div>
+
+        <!-- Date & Passengers -->
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="date">Taariikhda Safarka (Travel Date)</label>
+            <input type="date" id="date" required>
+          </div>
+
+          <div class="form-field">
+            <label for="pax">Tirada Rakaabka (Passengers)</label>
+            <input type="number" id="pax" min="1" max="50" value="1" required>
+          </div>
+        </div>
+
+        <!-- Passenger Contact Details -->
+        <div style="border-top: 1px solid rgba(120, 140, 190, .2); padding-top: 20px; margin-top: 6px;">
+          <label style="color: var(--tx); font-size: 14px; margin-bottom: 14px;">Xogta Qofka Dalbanaya (Passenger Details)</label>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="pName">Magacaaga oo Buuxa (Full Name)</label>
+              <input type="text" id="pName" placeholder="Tusaale: Axmed Maxamed Cali" required>
+            </div>
+            <div class="form-field">
+              <label for="pPhone">Telefoonkaaga / WhatsApp (Phone)</label>
+              <input type="tel" id="pPhone" placeholder="+252 61 XXX XXXX" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="pEmail">Email-kaaga (Ikhtiyaari - Optional)</label>
+            <input type="email" id="pEmail" placeholder="tusaale@email.com">
+          </div>
+          <div class="form-field">
+            <label for="pClass">Heerka Kursiga (Seating / Class)</label>
+            <select id="pClass">
+              <option value="Standard">Standard (Heerka Caadiga ah)</option>
+              <option value="Executive">Executive / VIP (Raaxo Dheeraad ah)</option>
+              <option value="Family">Family Seating (Qoysaska)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Seat Selection Field -->
+        <div style="background: rgba(10,35,88,.04); border: 1.5px dashed rgba(10,35,88,.25); border-radius: 16px; padding: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <label style="margin: 0; font-size: 14px; font-weight: 700; color: var(--navy);">Xulashada Kursiga (Interactive Seat Picker)</label>
+            <div id="seatDisplay" style="font-size: 13px; color: var(--mut); margin-top: 3px;">Kursi: <b id="selectedSeatLabel" style="color:var(--sun);">Auto Assigned (Dooro haddii aad rabto)</b></div>
+            <input type="hidden" id="pSeats" value="">
+          </div>
+          <button type="button" class="btn g sm" id="btnOpenSeatPicker" style="border: 1.5px solid var(--sun); color: var(--sun); background: #fff; font-weight: 700; cursor: pointer;">
+            💺 Dooro Kursiga (Pick Seat)
+          </button>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div>
+          <label style="font-weight: 700; font-size: 14px;">Dooro Habka Lacag Bixinta (Payment Method)</label>
+          <div class="payment-methods-grid">
+            <label class="pay-card">
+              <input type="radio" name="payMethod" value="EVC Plus" checked>
+              <div class="pay-content">
+                <b style="font-size: 13px;">EVC Plus</b>
+                <small style="display:block;font-size:11px;color:var(--mut);">*712#</small>
+              </div>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payMethod" value="Zaad Service">
+              <div class="pay-content">
+                <b style="font-size: 13px;">Zaad</b>
+                <small style="display:block;font-size:11px;color:var(--mut);">*888#</small>
+              </div>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payMethod" value="Sahal">
+              <div class="pay-content">
+                <b style="font-size: 13px;">Sahal</b>
+                <small style="display:block;font-size:11px;color:var(--mut);">*777#</small>
+              </div>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payMethod" value="Premier Bank">
+              <div class="pay-content">
+                <b style="font-size: 13px;">Bank/Card</b>
+                <small style="display:block;font-size:11px;color:var(--mut);">Premier</small>
+              </div>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payMethod" value="Cash on Board">
+              <div class="pay-content">
+                <b style="font-size: 13px;">Bixi Xafiiska</b>
+                <small style="display:block;font-size:11px;color:var(--mut);">Cash</small>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label for="pNotes">Fariin Dheeraad ah ama Baahi Gaar ah (Special Request)</label>
+          <textarea id="pNotes" rows="2" placeholder="Xaddi boorso, boos gaar ah, ama faahfaahin kale..."></textarea>
+        </div>
+
+        <button type="submit" class="btn p btn-center" style="font-size: 16px; padding: 16px; margin-top: 10px;">
+          Xaqiiji oo Dalbo Safarka (Confirm &amp; Book Now) →
+        </button>
+      </form>
+
+      <div class="msg" id="msg"></div>
+
+      <div style="margin-top: 24px; padding: 18px; border-radius: 16px; background: var(--bg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+        <span style="font-size: 14px; color: var(--mut);">Ma jeceshahay inaad taleefan toos ah ku dalbato?</span>
+        <a class="call" href="tel:+2520637537706" style="color: var(--navy); font-weight: 800;">📞 +252 063 7537706</a>
+      </div>
+    </div>
+
+    <!-- Right: Summary & Assistance Sidebar -->
+    <div class="booking-side-card">
+      <div class="card-box highlight">
+        <span class="badge-tag" style="background: rgba(255,138,31,.25); color: #fff;">Faahfaahinta Safarka</span>
+        <h3>Koobitaanka Dalabkaaga</h3>
+        <div class="summary-list">
+          <div class="summary-item">
+            <span class="label">Adeegga:</span>
+            <span class="val" id="sum-service">Bus</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Dariiqa Safarka:</span>
+            <span class="val" id="sum-route">Mogadishu → Hargeisa</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Taariikhda:</span>
+            <span class="val" id="sum-date">Gali taariikh</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Saacadda Bixitaanka:</span>
+            <span class="val" id="sum-time">06:00 AM (24-ka Saac)</span>
+          </div>
+          <div class="summary-item" id="sumTransitItem">
+            <span class="label">Magaalooyinka Sii-maridda:</span>
+            <span class="val" id="sum-transit">Direct</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Kuraasta:</span>
+            <span class="val" id="sum-seats">Auto Assigned</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Lacag Bixinta:</span>
+            <span class="val" id="sum-payment">EVC Plus</span>
+          </div>
+          <div class="summary-item" style="border: none; background: rgba(255,255,255,.12); padding: 10px 12px; border-radius: 12px; margin-top: 6px;">
+            <span class="label" style="color: #fff; font-weight: 700; font-size: 14px;">Wadarta Qiimaha:</span>
+            <span class="val" id="sum-price" style="color: #ffd15c; font-size: 22px; font-weight: 800;">$15.00 USD</span>
+          </div>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 13px; color: #c9d6f5; line-height: 1.5;">
+          Dalabkaaga isla goobta ayaa lagu xaqiijinayaa waxaana kuu soo baxaya Tikidh dijitaal ah oo aad isla markiiba daabacan karto ama u qaadan karto PDF.
+        </p>
+      </div>
+
+      <div class="card-box">
+        <h4 style="font-size: 18px; margin: 0 0 14px;">💳 Hababka Lacag Bixinta</h4>
+        <p style="font-size: 14px; color: var(--mut); margin: 0 0 14px;">
+          Waxaad si sahlan ugu bixin kartaa adeegyada lacagaha mobilada ee Soomaaliya:
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="background: rgba(10,35,88,.08); padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px;">EVC Plus</span>
+          <span style="background: rgba(10,35,88,.08); padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px;">Zaad Service</span>
+          <span style="background: rgba(10,35,88,.08); padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px;">Sahal Service</span>
+          <span style="background: rgba(10,35,88,.08); padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px;">Cash xafiiska</span>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <h4 style="font-size: 18px; margin: 0 0 10px;">🌟 Maxaa Loo Doortaa TRAVEL SOM?</h4>
+        <ul style="padding-left: 20px; margin: 0; font-size: 14px; color: var(--mut); line-height: 1.8;">
+          <li>Basas casri ah oo leh AC, Wi-Fi iyo kuraas jiif ah</li>
+          <li>Gaadiid taxi oo ammaan ah 24 saacba</li>
+          <li>Duulimaadyo lagu kalsoonaan karo oo waqtiga dhowra</li>
+          <li>Daryeel macaamiil oo joogto ah</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Booking Steps -->
+  <div style="margin-top: clamp(48px, 7vw, 84px);">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 36px;">
+      <span class="tag">Hannaanka Fudud</span>
+      <h2 style="font-size: clamp(26px, 3.5vw, 36px); margin: 6px 0 10px;">Sidee U Shaqeysaa Boos Celintu?</h2>
+      <p style="color: var(--mut); margin: 0;">Saddex talaabo oo fudud ayaa kugu xiraya safarkaaga xiga.</p>
+    </div>
+
+    <div class="feature-cards-grid">
+      <div class="f-card">
+        <div class="f-icon">1️⃣</div>
+        <h4>1. Dooro Safarkaaga</h4>
+        <p>Xulo adeegga (Bas, Taxi ama Diyaarad), magaalada aad ka baxeyso iyo meesha aad u socoto iyo taariikhda.</p>
+      </div>
+
+      <div class="f-card">
+        <div class="f-icon">2️⃣</div>
+        <h4>2. Buuxi Xogtaada</h4>
+        <p>Geli magacaaga iyo lambarkaaga telefoonka si aan booska kuugu diiwaangelino.</p>
+      </div>
+
+      <div class="f-card">
+        <div class="f-icon">3️⃣</div>
+        <h4>3. Hel Tikidhkaaga</h4>
+        <p>Hel xaqiijinta tikidhkaaga iyo kuraastaada SMS ama WhatsApp daqiiqado gudahood.</p>
+      </div>
+    </div>
+  </div>
+  </div> <!-- /panelBooking -->
+
+  <!-- Tab 2: Ticket Tracking Section -->
+  <div id="panelTracking" style="display: none;">
+    <div class="track-search-card" style="margin: 0 auto 36px;">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="badge-tag">BAADHITAANKA TIKIDHKA &bull; TICKET TRACKING</span>
+        <h2 style="font-size: clamp(22px, 3vw, 30px); margin: 8px 0 8px;">Raadi Xaaladda Tikidhkaaga Safarka</h2>
+        <p style="color: var(--mut); margin: 0; font-size: 15px;">Gali lambarkaaga gaarka ah ee dalabka (Booking Reference tusaale: <code>TS-2026-1001</code>) ama lambarkii taleefanka aad ku dalbatay si aad u aragto ama u daabacato tikidhkaaga.</p>
+      </div>
+
+      <form id="trackForm" class="track-form-grid">
+        <div class="form-field" style="flex: 2;">
+          <label for="trackQuery">Lambarka Dalabka (Ref ID) ama Taleefanka</label>
+          <input type="text" id="trackQuery" placeholder="Tusaale: TS-2026-1001 ama 0615551234" required autocomplete="off">
+        </div>
+        <div style="display: flex; align-items: flex-end;">
+          <button type="submit" class="btn p" id="trackSubmitBtn" style="height: 52px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>🔍 Raadi Tikidhka</span>
+          </button>
+        </div>
+      </form>
+
+      <div id="trackResult" style="margin-top: 36px;">
+        <!-- Loading, Error or Ticket Card injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking FAQs -->
+  <div style="margin-top: clamp(48px, 6vw, 72px);">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 32px;">
+      <span class="tag">Su'aalaha Macaamiisha</span>
+      <h2 style="font-size: clamp(24px, 3vw, 34px); margin: 6px 0 10px;">Su'aalaha Badanaa La Isweydiiyo</h2>
+      <p style="color: var(--mut); margin: 0;">Faahfaahin ku saabsan shuruucda tikidhada iyo safarrada.</p>
+    </div>
+
+    <div class="faq-list" style="max-width: 860px; margin: 0 auto;">
+      <div class="faq-item">
+        <h4>Goorma ayaa la ii soo xaqiijinayaa dalabkayga?</h4>
+        <p>Dalabkaaga waxa lagu xaqiijiyaa 5 ilaa 15 daqiiqo gudahood. Kooxdayada daryeelka macaamiisha ayaa toos kuugu soo wici doonta ama fariin WhatsApp ah kuugu soo diri doonta.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Ma beddeli karaa taariikhda safarka marka aan dalbado kadib?</h4>
+        <p>Haa, waxaad beddeli kartaa taariikhda safarka adigoo nala soo xiriiraya ugu yaraan 6 saacadood ka hor xilliga bixitaanka.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Xaddiga alaabta iyo boorsooyinka la oggol yahay maxay tahay?</h4>
+        <p>Rakaab kasta oo bas ama diyaarad raacaya waxaa u oggol hal boorso oo weyn (ilaa 20 kg) iyo boorso yar oo gacanta ah. Haddii aad leedahay shixnad dheeraad ah fadlan foomka ku xus.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- Call to action bar -->
+<section class="sec-flush">
+  <div class="wrap">
+    <div class="ctab">
+      <h2>Su'aalo Dheeraad Ah Ma Qabtaa?</h2>
+      <p>Haddii aad u baahan tahay caawinaad degdeg ah ama baahi gaar ah, nala soo xiriir hadda.</p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a class="btn p btn-lg" href="tel:+2520637537706">📞 Wac Hadda: +252 063 7537706</a>
+        <a class="btn g btn-lg" href="contact.html">Booqo Bogga Contact Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><div class="fg">
+<div><a href="index.html" class="logo"><i>✈</i>TRAVEL <b>SOM</b></a><p>A modern Somali travel and transportation company connecting major cities by bus, taxi and air.</p><div class="soc"><a href="#">f</a><a href="#">ig</a><a href="#">X</a><a href="#">wa</a></div></div>
+<div><h4>Quick Links</h4><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="admin/index.html">Admin Portal</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="booking.html">Easy Booking</a></li>
+<li><a href="#track" onclick="if(window.switchBookingTab) window.switchBookingTab('track'); return false;">Raadi Tikidhka (Track Trip)</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="index.html#cities">Cities</a></li>
+<li><a href="/admin/" style="color:var(--sun);">🔐 Admin Portal</a></li>
+</ul></div>
+<div><h4>Contact</h4><p>info@travelsom.com<br><a class="call" href="tel:+2520637537706">Call Us: +252 063 7537706</a><br>Somalia</p></div></div>
+<div class="copy">© 2026 TRAVEL SOM. All Rights Reserved.</div></div></footer>
+
+<script src="js/script.js"></script>
+<script>
+  window.switchBookingTab = function(tab) {
+    var pBook = document.getElementById('panelBooking');
+    var pTrack = document.getElementById('panelTracking');
+    var btnBook = document.getElementById('tabBtnBooking');
+    var btnTrack = document.getElementById('tabBtnTracking');
+    if (!pBook || !pTrack || !btnBook || !btnTrack) return;
+
+    if (tab === 'track') {
+      pBook.style.display = 'none';
+      pTrack.style.display = 'block';
+      btnTrack.className = 'btn p';
+      btnTrack.style.background = '';
+      btnTrack.style.color = '';
+      btnBook.className = 'btn g';
+      btnBook.style.background = 'transparent';
+      btnBook.style.color = 'var(--navy)';
+      var formEl = document.getElementById('booking-form');
+      if (formEl) formEl.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      pTrack.style.display = 'none';
+      pBook.style.display = 'block';
+      btnBook.className = 'btn p';
+      btnBook.style.background = '';
+      btnBook.style.color = '';
+      btnTrack.className = 'btn g';
+      btnTrack.style.background = 'transparent';
+      btnTrack.style.color = 'var(--navy)';
+    }
+  };
+
+  var bBtn = document.getElementById('tabBtnBooking');
+  var tBtn = document.getElementById('tabBtnTracking');
+  var qLink = document.getElementById('quickTrackLink');
+  if (bBtn) bBtn.addEventListener('click', function() { window.switchBookingTab('book'); });
+  if (tBtn) tBtn.addEventListener('click', function() { window.switchBookingTab('track'); });
+  if (qLink) qLink.addEventListener('click', function(e) { e.preventDefault(); window.switchBookingTab('track'); });
+
+  // Auto-switch to tracking if URL parameters or hash request tracking
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var ref = params.get('ref') || params.get('q');
+    var phone = params.get('phone');
+    var tab = params.get('tab');
+    var autoPrint = params.get('print') === '1';
+
+    if (tab === 'track' || ref || phone || window.location.hash === '#track') {
+      window.switchBookingTab('track');
+    }
+
+    var input = document.getElementById('trackQuery');
+    if (ref && input) {
+      input.value = ref;
+      setTimeout(function() {
+        if (window.performTracking) window.performTracking(ref, '', autoPrint);
+      }, 150);
+    } else if (phone && input) {
+      input.value = phone;
+      setTimeout(function() {
+        if (window.performTracking) window.performTracking('', phone, autoPrint);
+      }, 150);
+    }
+  })();
+</script>
+</body>
+</html>

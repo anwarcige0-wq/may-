@@ -1,0 +1,24 @@
+{
+  "name": "travel-som",
+  "version": "1.0.0",
+  "description": "TRAVEL SOM - Travel & Transportation Web Application across Somalia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "backup": "node export_backup.js"
+  },
+  "keywords": [
+    "travel",
+    "somalia",
+    "transportation"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^10.1.0"
+  }
+}

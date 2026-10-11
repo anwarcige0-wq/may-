@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+data/travelsom.db-wal
+data/travelsom.db-shm

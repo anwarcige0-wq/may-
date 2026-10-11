@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raadi Tikidhka — TRAVEL SOM</title>
+  <meta http-equiv="refresh" content="0; url=booking.html?tab=track">
+  <script>
+    var search = window.location.search;
+    var target = 'booking.html?tab=track' + (search ? '&' + search.substring(1) : '') + (window.location.hash || '');
+    window.location.replace(target);
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 50px;">
+  <p>Fadlan sug... Waxaa laguu wareejinayaa qaybta Raadinta Tikidhka ee bogga Easy Booking.</p>
+  <p><a href="booking.html?tab=track">Haddii aysan toos u furmin guji halkan</a></p>
+</body>
+</html>
