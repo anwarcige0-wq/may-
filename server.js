@@ -18,7 +18,7 @@ const ROOT_DIR = __dirname;
 const DATA_DIR = process.env.TSOM_DATA_DIR || path.join(ROOT_DIR, 'data');
 const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
 const DB_PATH = path.join(DATA_DIR, 'travelsom.db');
-const ADMIN_EMAIL = (process.env.TSOM_ADMIN_EMAIL || 'cabdilahi cawil881@gmail.com').toLowerCase().trim();
+const ADMIN_EMAIL = (process.env.TSOM_ADMIN_EMAIL || 'cabdilahicawil881@gmail.com').toLowerCase().trim();
 const ADMIN_DEFAULT_PIN = 'somtravel';
 
 // Ensure data and upload directories exist

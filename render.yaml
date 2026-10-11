@@ -9,4 +9,4 @@ services:
       - key: NODE_VERSION
         value: 22.12.0
       - key: TSOM_ADMIN_EMAIL
-        value: cabdilahi cawil881@gmail.com
+        value: cabdilahicawil881@gmail.com
