@@ -83,7 +83,8 @@ a {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 clamp(16px,4vw,64px);
+  padding: 0 clamp(14px, 2.5vw, 40px);
+  box-sizing: border-box;
 }
 
 section {
@@ -196,44 +197,18 @@ header {
 
 nav ul {
   display: flex;
-  gap: clamp(24px,3.2vw,48px);
+  gap: clamp(10px, 1.3vw, 22px);
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 nav a {
   white-space: nowrap;
-}
-
-.nav {
-  gap: 16px;
-}
-
-.nav>.call {
-  white-space: nowrap;
-  color: #fff;
-  font-size: 14px;
-}
-
-.mob {
-  display: none;
-}
-
-.nav>.btn {
-  white-space: nowrap;
-  padding: 10px 22px;
-  flex: none;
-}
-
-.logo {
-  white-space: nowrap;
-}
-
-nav a {
   color: #dbe5ff;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   transition: .2s;
   position: relative;
   padding: 6px 0;
@@ -258,6 +233,36 @@ nav a:hover {
   color: var(--sun);
 }
 
+.nav {
+  gap: clamp(8px, 1.2vw, 16px);
+}
+
+.nav>.call {
+  white-space: nowrap;
+  color: #fff;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.mob {
+  display: none;
+}
+
+.nav>.btn {
+  white-space: nowrap;
+  padding: 9px 18px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.logo {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .menu {
   display: none;
   background: none;
@@ -265,15 +270,22 @@ nav a:hover {
   color: #fff;
   font-size: 28px;
   cursor: pointer;
+  padding: 4px;
 }
 
-@media(max-width:980px) {
+@media(max-width: 1240px) {
   .nav>.call span {
     display: none;
   }
+  .nav>.call {
+    font-size: 18px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+  }
 }
 
-@media(max-width:899px) {
+@media(max-width: 1040px) {
   .mob {
     display: block;
   }
@@ -297,22 +309,17 @@ nav a:hover {
     max-height: 0;
     overflow: hidden;
     transition: .35s;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.3);
   }
   nav.open {
-    max-height: 520px;
+    max-height: 540px;
   }
   nav ul {
     flex-direction: column;
-    padding: 12px 20px 20px;
-    gap: 14px;
+    align-items: flex-start;
+    padding: 16px 24px 24px;
+    gap: 16px;
   }
-  .nav>.btn {
-    padding: 9px 16px;
-    font-size: 14px;
-  }
-}
-
-@media(max-width:899px) {
   .hero {
     padding-bottom: 104px!important;
   }
