@@ -1438,6 +1438,7 @@ const server = http.createServer(async (req, res) => {
   let safeRel = pathname;
   if (safeRel === '/' || safeRel === '') safeRel = '/index.html';
   if (safeRel === '/about') safeRel = '/about.html';
+  if (safeRel === '/services') safeRel = '/services.html';
   if (safeRel === '/booking') safeRel = '/booking.html';
   if (safeRel === '/contact') safeRel = '/contact.html';
   if (safeRel === '/track' || safeRel === '/track.html') {
